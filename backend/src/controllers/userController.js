@@ -34,11 +34,11 @@ export const register = asyncHandler(async (req, res, next) => {
      if(!isValidEmail(email))
       return next(new ApiError("Please provide a valid email address"))
 
-     const isValid = await verifyEmail(email);
-     if (!isValid) {
-      console.log("isvalid : ",isValid)
-       return next(new ApiError('Invalid email address , does not exist' ));
-     }
+    //  const isValid = await verifyEmail(email);
+    //  if (!isValid) {
+    //   console.log("isvalid : ",isValid)
+    //    return next(new ApiError('Invalid email address , does not exist' ));
+    //  }
 
 
   const isExist = await User.findOne({ email });
