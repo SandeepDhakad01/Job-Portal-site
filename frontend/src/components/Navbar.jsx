@@ -16,7 +16,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        `${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/api/v1/user/logout`,
+        `${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/v1/user/logout`,
         {
           withCredentials: true,
         }
