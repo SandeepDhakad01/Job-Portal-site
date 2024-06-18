@@ -78,8 +78,8 @@ const Alljobs = () => {
 
         <div className="search-container">
         <form onSubmit={handleFilter}>
-      <div class="filter">
-        <select class="child" value={category} onChange={(e)=>setCategory(e.target.value)}>
+      <div className="filter">
+        <select className="child" value={category} onChange={(e)=>setCategory(e.target.value)}>
           <option value="">Select Category</option>
           <option value="Graphics & Design">Graphics & Design</option>
           <option value="Mobile App Development">Mobile App Development</option>
@@ -98,11 +98,11 @@ const Alljobs = () => {
           <option value="remote">Work from Home</option>
           <option value="from office">Work from Office</option>
         </select>
-        <input class="child" type="text" placeholder="Country" value={country} onChange={(e)=>setCountry(e.target.value)} />
-        <input class="child" type="text" placeholder="City" value={city} onChange={(e)=>setCity(e.target.value)} />
+        <input className="child" type="text" placeholder="Country" value={country} onChange={(e)=>setCountry(e.target.value)} />
+        <input className="child" type="text" placeholder="City" value={city} onChange={(e)=>setCity(e.target.value)} />
       </div>
-      <div class="btn-container">
-        <input class="filter-btn" type="submit" value="Search Jobs" />
+      <div className="btn-container">
+        <input className="filter-btn" type="submit" value="Search Jobs" />
       </div>
     </form>
          

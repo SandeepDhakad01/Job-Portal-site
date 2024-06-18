@@ -13,7 +13,7 @@
         "use": "@vercel/node"
       }
     ],
-    "routes": [
+    "rewrites": [
       {
         "src": "/api/(.*)",
         "dest": "/backend/src/index.js"

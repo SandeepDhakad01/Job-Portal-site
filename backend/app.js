@@ -16,7 +16,7 @@ const app=express();
 
 app.use(cors({
     origin:process.env.FRONTEND_URL, // ek se jada url ke liye array bhi de sakte h
-    // methods:["GET", "POST", "DELETE", "PUT"],
+    methods:["GET", "POST", "DELETE", "PUT"],
     credentials:true
 }))
 
