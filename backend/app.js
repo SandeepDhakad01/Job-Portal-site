@@ -33,6 +33,9 @@ app.use(express.urlencoded({
 }))
 
 
+app.get('/', (req, res) => {
+    res.send('Server is running successfully');
+  });
 
  // import routes
 
