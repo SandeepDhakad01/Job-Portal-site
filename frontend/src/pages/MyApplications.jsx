@@ -16,7 +16,7 @@ const MyApplications = () => {
   useEffect(() => {
     try {
         axios
-          .get("http://localhost:8000/api/v1/application/myallapplications", {
+          .get(`${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/v1/application/myallapplications`, {
             withCredentials: true,
           })
           .then((res) => {

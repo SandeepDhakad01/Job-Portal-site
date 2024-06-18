@@ -24,7 +24,7 @@ const HeroSection = () => {
 
  const fetch=async()=>{
  try{
-      const response=await axios.get('http://localhost:8000/api/v1/user/getusercount',
+      const response=await axios.get(`${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/v1/user/getusercount`,
         {
           withCredentials: true,
         }

@@ -60,7 +60,7 @@ useEffect(() => {
     try {
       //console.log("App useEffect...")
       const response = await axios.get(
-        "http://localhost:8000/api/v1/user/getuser",
+       `${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/v1/user/getuser`,
         {
           withCredentials: true,
         }

@@ -19,7 +19,7 @@ const Login = () => {
     try {
       console.log("handleLogin called")
       const { data } = await axios.post(
-        `${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/api/v1/user/login`,
+        `${String(import.meta.env.VITE_BACKEND_API_BASEURL)}/v1/user/login`,
         { email, password, role },
         {
           headers: {
