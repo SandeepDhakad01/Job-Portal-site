@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors'
-import dotenv from 'dotenv'
+//import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser';
 
 //import middlewares
@@ -10,9 +10,9 @@ import { errorHandlerMiddleware } from './src/middlewares/errorHandler.Middlewar
 
 const app=express();
 
-dotenv.config({
-    path:"./.env"
-})
+// dotenv.config({
+//     path:"./.env"
+// })
 
 app.use(cors({
     origin:process.env.FRONTEND_URL, // ek se jada url ke liye array bhi de sakte h
