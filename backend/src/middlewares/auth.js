@@ -4,6 +4,7 @@
     import jwt from "jsonwebtoken"
   
 export const isAuthorized = asyncHandler(async(req,res,next)=>{
+  console.log("resquest.cookie =>",req.cookies)
     const {accessToken}=req.cookies;
      console.log("welcome to auth secction...")
     if(!accessToken){

@@ -65,7 +65,8 @@ export const register = asyncHandler(async (req, res, next) => {
     const options={
       expires: new Date(Date.now()+process.env.COOKIE_EXPIRE*24*60*60*1000),
       httpOnly:true,
-      secure:true
+      secure:true,
+      sameSite: 'None' // Allow cross-site cookies
     }
      
    
@@ -108,7 +109,8 @@ export const login=asyncHandler(async(req,res,next)=>{
       const options={
           expires:new Date(Date.now()+process.env.COOKIE_EXPIRE*24*60*60*1000),
           httpOnly:true,
-          secure:true
+          secure:true,
+          sameSite: 'None' // Allow cross-site cookies
       }
 
       user.password=undefined
@@ -122,7 +124,8 @@ export const login=asyncHandler(async(req,res,next)=>{
 export const logout=asyncHandler(async(req,res)=>{
       const options={
         httpOnly:true,
-        secure:true
+        secure:true,
+        sameSite: 'None' // Allow cross-site cookies
       }
       try {
          res.status(200)
