@@ -122,7 +122,7 @@ const JobSeekerCard = ({ element, deleteApplication, openModal }) => {
           <img
             src={element.resume}
             alt="resume"
-            onClick={() => openModal(element.resume.url)}
+            onClick={() => openModal(element.resume)}
           />
         </div>
         <div className="btn_area">
