@@ -20,7 +20,7 @@ const MyApplications = () => {
             withCredentials: true,
           })
           .then((res) => {
-            setApplications(res.data.data.applications);
+            setApplications(res.data.data.applications,res.data.data.job);
           });
       }
     catch (error) {
@@ -101,6 +101,9 @@ const JobSeekerCard = ({ element, deleteApplication, openModal }) => {
     <>
       <div className="job_seeker_card">
         <div className="detail">
+        <p>
+            <span>For</span> {element.company}
+          </p>
           <p>
             <span>Name:</span> {element.name}
           </p>

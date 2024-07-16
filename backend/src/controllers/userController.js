@@ -12,6 +12,7 @@ function isValidEmail(email) {
 async function verifyEmail(email) {
   try {
     const requestUrl=`https://api.zerobounce.net/v2/validate?api_key=${process.env.ZEROBOUNCE_API_KEY}&email=${email}`;
+    
     console.log("requestUrl : ",requestUrl)
     
     const response = await axios.get(requestUrl);

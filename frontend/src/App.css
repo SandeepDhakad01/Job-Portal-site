@@ -118,6 +118,7 @@ a{
   justify-content: center;
   background: #fff;
   padding: 20px 20px;
+  margin-left: 10px;
 }
 .authPage .container .header {
   display: flex;
@@ -1288,8 +1289,9 @@ nav .container {
   font-family:"Rubik", sans-serif;
 }
 nav .container .logo {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 57px;
+  margin: 15px 0;
 }
 nav .container .logo img {
   width:100%;
@@ -1323,9 +1325,9 @@ nav .menu li a {
   position: relative;
 }
 .active{
-  color:#88b53c;
+  color:#99d03f;
   text-decoration: underline;
-  text-decoration-color:#88b53c;
+  text-decoration-color:#96c743;
   font-weight: bolder;
   
 }

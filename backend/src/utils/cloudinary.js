@@ -33,3 +33,26 @@ export const uploadToCloudinary=async(localFilePath)=>{
 }
 
 
+
+
+
+
+// export const uploadToCloudinary = async (fileBuffer) => {
+//   try {
+//     if (!fileBuffer || !Buffer.isBuffer(fileBuffer)) {
+//       throw new Error('File buffer is invalid');
+//     }
+
+//     const cloudinaryResponse = await cloudinary.uploader.upload(fileBuffer, {
+//       resource_type: 'auto',
+//     });
+
+//     if (!cloudinaryResponse) {
+//       throw new Error('Failed to upload file to Cloudinary');
+//     }
+
+//     return cloudinaryResponse;
+//   } catch (error) {
+//     throw new Error('Error uploading file to Cloudinary: ' + error.message);
+//   }
+// };

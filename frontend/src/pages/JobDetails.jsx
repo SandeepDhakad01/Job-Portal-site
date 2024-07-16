@@ -50,10 +50,10 @@ const JobDetails = () => {
             Location: <span>{job.location}</span>
           </p>
           <p>
-            Description: <span>{job.description}</span>
+            Description: <pre>{job.description}</pre>
           </p>
           <p>
-            Job Posted On: <span>{job.jobPostedOn}</span>
+            Job Posted On: <span>{Date(job.updatedAt)}</span>
           </p>
           <p>
             Salary:{" "}

@@ -64,10 +64,10 @@ const Register = () => {
           </div>
           <form>
             <div className="inputTag">
-              <label>Register As</label>
+              <label>Register As <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <select value={role} onChange={(e) => setRole(e.target.value)}>
-                  <option value="">Select Role</option>
+                  <option value="">Select Role </option>
                   <option value="Recruiter">Recruiter</option>
                   <option value="Job Seeker">Job Seeker</option>
                 </select>
@@ -75,11 +75,11 @@ const Register = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Name</label>
+              <label>Name <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="text"
-                  placeholder="Zeeshan"
+                  placeholder="yash chapri"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -87,11 +87,11 @@ const Register = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Email Address</label>
+              <label>Email Address <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="email"
-                  placeholder="zk@gmail.com"
+                  placeholder="example@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -99,11 +99,11 @@ const Register = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Phone Number</label>
+              <label>Phone Number <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="number"
-                  placeholder="12345678"
+                  placeholder="enter your 10 digit phone no..."
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -111,7 +111,7 @@ const Register = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Password</label>
+              <label>Password <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="password"

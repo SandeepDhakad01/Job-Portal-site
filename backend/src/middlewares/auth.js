@@ -12,7 +12,7 @@ export const isAuthorized = asyncHandler(async(req,res,next)=>{
     }
 
    const decoded=jwt.verify(accessToken,process.env.JWT_SECRET_KEY);
-    
+     
    const user=await User.findById(decoded.id);
       
    if(!user) 

@@ -15,7 +15,7 @@ const app=express();
 // })
 
 app.use(cors({
-    origin:process.env.FRONTEND_URL, // ek se jada url ke liye array bhi de sakte h
+    origin:[process.env.FRONTEND_URL,"http://localhost:5173"], // ek se jada url ke liye array bhi de sakte h
     methods:["GET", "POST", "DELETE", "PUT"],
     credentials:true
 }))
@@ -47,7 +47,7 @@ app.use('/api/v1/user',userRouter)
 app.use('/api/v1/job',jobRouter)
 app.use('/api/v1/application',applicationRouter)
 
-
+ 
 
 app.use(errorHandlerMiddleware)
 

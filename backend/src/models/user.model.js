@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
         maxLength: [30, "Name must be smaller than 30 characters"],
         trim: true
     },
-
+    
     email: {
         type: String,
         required: [true, "please provide your email"],
@@ -58,14 +58,16 @@ userSchema.pre("save", async function (next) {
     next()
 })
 
+
+
 userSchema.methods.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(password, this.password)
 }
 
 userSchema.methods.generateJWTToken = function () {
     return jwt.sign(
-        { id: this._id, email: this.email },
-        process.env.JWT_SECRET_KEY,
+        { id:this._id , email:this.email },
+           process.env.JWT_SECRET_KEY,
         {
             expiresIn: process.env.JWT_EXPIRES,
         }

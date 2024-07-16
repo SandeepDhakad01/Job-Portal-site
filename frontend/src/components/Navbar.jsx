@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMyContext } from "../contexts/MyContext";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -11,6 +11,8 @@ const Navbar = () => {
   const { isAuthorized, setIsAuthorized, user, setUser } = useMyContext();
   console.log("navbar re-renders");
 
+  useEffect(()=>{},[user]) 
+  
   const navigateTo = useNavigate();
 
   const handleLogout = async () => {

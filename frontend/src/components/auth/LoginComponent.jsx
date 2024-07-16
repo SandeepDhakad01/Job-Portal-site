@@ -38,7 +38,7 @@ const Login = () => {
       setIsAuthorized(true);
      
     } catch (error) {
-      toast.error(error.response.data?.message);
+      toast.error(error?.response?.data?.message);
     }
   };
 
@@ -56,7 +56,7 @@ const Login = () => {
           </div>
           <form>
             <div className="inputTag">
-              <label>Login As</label>
+              <label>Login As <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <select value={role} onChange={(e) => setRole(e.target.value)}>
                   <option value="">Select Role</option>
@@ -67,7 +67,7 @@ const Login = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Email Address</label>
+              <label>Email Address <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="email"
@@ -79,7 +79,7 @@ const Login = () => {
               </div>
             </div>
             <div className="inputTag">
-              <label>Password</label>
+              <label>Password <span style={{ color: 'red' }}>*</span></label>
               <div>
                 <input
                   type="password"

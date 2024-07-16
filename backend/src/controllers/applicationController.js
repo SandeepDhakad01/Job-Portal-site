@@ -39,16 +39,15 @@ export const applyForJob=asyncHandler(async(req,res,next)=>{
      if(isAlreadyApplied)  
         return next(new ApiError("You already apply for this job.."))
    
-     
+         // console.log("req.file:",req.file)
      const resume=req.file?.['path']
      const {coverLetter}=req.body
       
-   
-     const cloudinaryResponse= await uploadToCloudinary(resume);
-
+     
      if(!coverLetter || !resume)
-        return next(new ApiError("resume or coverLetter is missing ...",400))
-
+      return next(new ApiError("resume or coverLetter is missing ...",400))
+   
+   const cloudinaryResponse= await uploadToCloudinary(resume);
         
       const application=await Application.create({
          applicantID:req.user._id,
